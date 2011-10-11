@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<title>Twitter & Google Maps Demo</title>
+
+		<!--Set options for mobile devices-->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<!--Include local stylesheet resources (Map, Jquery UI)-->
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+
+		<!--Include remote javascript resources (Google Maps API, JQuery, JQuery UI)-->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+		<!--Include local javascript resources (Map, Twitter, Driver)-->
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript" src="js/twitter.js"></script>
+		<script type="text/javascript" src="js/driver.js"></script>
+		<script type="text/javascript" src="js/ui.js"></script>
+		
+	</head>
+
+	<body>
+		
+		<!--Initialize the driver-->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			//driver.js
+			initialize();
+		});
+		</script>
+
+		<!--Canvas on which the Google Maps API will draw-->
+		<div id="control_panel">
+			<p>Search Term: <input type="text" id="search_term" value="asu"></p>
+			<p>GPS Coordinate: <input type="text" id="gps_coordinate" value="33.424099,-111.939619"></p>
+			<p>Radius: <input type="text" id="radius" value=".5mi"></p>
+			<input type="submit" value="Submit">
+		</div>
+		<div id="map_canvas" />
+		<div class="clear"></div>
+		
+	</body>
+</html>
